@@ -14,8 +14,8 @@ public class Task3 {
         double sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum = sum + array[i];
-            sum = sum / array.length;
         }
+            sum = sum / array.length;
         System.out.printf(String.format("sum %.1f", sum));
     }
 }
