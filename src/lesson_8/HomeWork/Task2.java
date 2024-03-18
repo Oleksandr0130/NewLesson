@@ -31,7 +31,7 @@ public class Task2 {
     }
 
     public static void main(String[] args) {
-        int[] array = {1, 2, 1, 3, 4, 5, 6, 7, 8, 9, -1, -1000};
+        int[] array = {5,4,3,2,1,0};
 
         System.out.println(minValue(array));
         System.out.println(getIndexByValue(array, 1));
