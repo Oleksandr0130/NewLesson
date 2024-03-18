@@ -12,8 +12,8 @@ package lesson_8.HomeWork;
 public class Task2 {
 
     public static int minValue(int[] array) {
-        int min = 0;
-        for (int i = 0; i < array.length; i++) {
+        int min = array[0];
+        for (int i = 1; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
             }
@@ -31,9 +31,9 @@ public class Task2 {
     }
 
     public static void main(String[] args) {
-        int[] array = {5,4,3,2,1,0};
+        int[] array = {5,4,3};
 
         System.out.println(minValue(array));
-        System.out.println(getIndexByValue(array, 1));
+        System.out.println(getIndexByValue(array, 3));
     }
 }
