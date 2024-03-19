@@ -27,7 +27,7 @@ public class Task2 {
 
     public static int minIndexOfMinValue (int[]randomArray){
         int minIndex = 0;
-        for (int i = 1; i < randomArray.length; i++) {
+        for (int i = 0; i < randomArray.length; i++) {
             if (randomArray[i] < randomArray[minIndex]){
                 minIndex = i;
             }
@@ -37,7 +37,7 @@ public class Task2 {
 
     public static int indexOf(int[] randomArray,int startIndex, int endIndex){
         int minIndex = startIndex;
-        for (int i = startIndex + 1; i <=endIndex ; i++) {
+        for (int i = startIndex + 1; i < endIndex ; i++) {
             if (randomArray[i] < randomArray[minIndex]){
                 minIndex = i;
             }
@@ -45,16 +45,31 @@ public class Task2 {
 
         return minIndex;
     }
+
+
+    public static void sort(int[]randomArray){
+        for (int i = 0; i < randomArray.length; i++) {
+            int minIndex = indexOf(randomArray,i, randomArray.length);
+            indexOf(randomArray,i, minIndex);
+        }
+    }
+
+
+
     public static void main(String[] args) {
         int[] randomArray = {1,2,3,4,5,6,7,8,9,0,100,345,65,42,766,12,546,2,4,34};
 
         System.out.println(Arrays.toString(randomArray));
 
-        replaceByIndex(randomArray,3,4);
+        replaceByIndex(randomArray,0,4);
         System.out.println(Arrays.toString(randomArray));
 
         System.out.println(minIndexOfMinValue(randomArray));
 
         System.out.println(indexOf(randomArray, 0, 10));
+
+        sort(randomArray);
+        System.out.println(Arrays.toString(randomArray));
+
     }
 }
