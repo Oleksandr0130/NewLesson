@@ -2,6 +2,10 @@ package lesson_10.HomeWork;
 
 import java.util.Arrays;
 
+/*
+Метод который сортирует массив от большего к наименьшему
+ */
+
 public class Task1 {
 
     public static int maxIndex(int[] array, int start, int end) {
