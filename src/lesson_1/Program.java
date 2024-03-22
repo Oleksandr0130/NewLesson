@@ -1,4 +1,4 @@
-package consultation;
+package lesson_1;
 
 import java.util.Scanner;
 
