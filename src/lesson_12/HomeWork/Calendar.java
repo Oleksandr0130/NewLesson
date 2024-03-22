@@ -14,7 +14,7 @@ import java.util.Scanner;
 Написать следующую программу: пользователь 3 числа int: день, месяц и год. Программа определяет, может ли это быть корректной датой. Например: 29 2 2001 - нет, а 29 2 2004 - да.
  */
 public class Calendar {
-    public static void month(int choice) {
+    public static void getMonthTitle(int choice) {
         while (choice != 0) {
             switch (choice) {
                 case 1:
@@ -70,7 +70,7 @@ public class Calendar {
         System.out.print("Enter the month of the year  -> ");
         int choice = scanner.nextInt();
 
-        month(choice);
+        getMonthTitle(choice);
 
     }
 }
