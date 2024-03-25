@@ -22,8 +22,8 @@ public class AutoApp {
     }
 
     public static void getListOfAutos(Auto[] auto) {
-        for (int i = 0; i < auto.length; i++) {
-            System.out.println(auto[i].toString());
+        for (Auto value : auto) {
+            System.out.println(value.toString());
         }
     }
 
