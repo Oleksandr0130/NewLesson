@@ -21,7 +21,7 @@ public class Transaction {
     }
 
     public String toNameAccountString(){
-        return date + "From: " + from.getClient() + "(" + from.getIBAN() + ")" + "To: " + to.getClient() + "(" + to.getIBAN() + ")" + amount;
+        return date +  " From: " + from.getClient() + " (" + from.getIBAN() + ") " + " To: " + to.getClient() + " (" + to.getIBAN() + ") "  +amount;
     }
 
     @Override

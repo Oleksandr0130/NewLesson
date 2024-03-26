@@ -13,10 +13,9 @@ public class TransactionData {
 
     @Override
     public String toString() {
-        return "TransactionData{" +
-                "day=" + day +
-                ", month=" + month +
-                ", year=" + year +
+        return "TransactionData {" + year +
+                "/" + month +
+                "/" + day +
                 '}';
     }
 }
