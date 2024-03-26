@@ -16,16 +16,26 @@ public class Transaction {
         this.date = date;
     }
 
+    public void executeTransaction(){
+        if (from.getBalance() >= amount){
+            from.setBalance(from.getBalance() - amount);
+
+            to.setBalance(to.getBalance() + amount);
+        }else {
+            System.out.println("Недостаточно средств на счете!!!");
+        }
+    }
+
     public String toAccountString(){
-        return date + " " + from.getIBAN() + " " + to.getIBAN() + " " +  amount;
+        return date.toDateFormatString() + " " + from.getIBAN() + " " + "\n" + to.getIBAN() + " " +  amount;
     }
 
     public String toNameAccountString(){
-        return date +  " From: " + from.getClient() + " (" + from.getIBAN() + ") " + " To: " + to.getClient() + " (" + to.getIBAN() + ") "  +amount;
+        return date.toDateFormatString() +  " From: " + from.getClient() + " (" + from.getIBAN() + ") " + "\nTo: " + to.getClient() + " (" + to.getIBAN() + ") "  +amount;
     }
 
     @Override
     public String toString() {
-        return "Transaction" ;
+        return "Transaction";
     }
 }

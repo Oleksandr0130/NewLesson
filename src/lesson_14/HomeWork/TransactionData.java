@@ -11,11 +11,13 @@ public class TransactionData {
         this.year = year;
     }
 
-    @Override
     public String toString() {
-        return "TransactionData {" + year +
-                "/" + month +
-                "/" + day +
-                '}';
+        return "TransactionData: " + day +
+                " / " + month +
+                " / " + year ;
+    }
+
+    public  String toDateFormatString(){
+        return year + " / " + month + " / " + day;
     }
 }
