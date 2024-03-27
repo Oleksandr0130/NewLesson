@@ -7,34 +7,33 @@ public class Transactions {
     private Transaction[] array;
     private int size;
 
-    public Transactions(int capacity){
+    public Transactions(int capacity) {
         array = new Transaction[capacity];
-        size=0;
+        size = 0;
     }
 
-    public String toString(){
+    public String toString() {
         System.out.println("-------- Transaction:");
-        String res="";
+        String res = "";
         for (int i = 0; i < size; i++) {
-            res=res+array[i]+"\n";
+            res = res + array[i] + "\n";
         }
         return res;
     }
 
-    public String toStringFull(){
+    public String toStringFull() {
         System.out.println("-------- Transaction Full:");
-        String res="";
+        String res = "";
         for (int i = 0; i < array.length; i++) {
-            res=res+array[i]+"\n";
+            res = res + array[i] + "\n";
         }
         return res;
     }
 
 
+    public void addTransaction(Transaction transaction) {
 
-    public void addTransaction(Transaction transaction){
-
-        if (size>=array.length) {
+        if (size >= array.length) {
             Transaction[] newArray = Arrays.copyOf(array, array.length * 2);
             array = newArray;
         }
